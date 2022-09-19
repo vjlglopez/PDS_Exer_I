@@ -1,4 +1,4 @@
-# PDS_Exer_I
+# Python_Exercises
 
-This is the repository of my compiled python exercise 1 for PDS under 
-the Master of Science in Data Science course.
+This is the repository of my compiled python exercises for a course under
+the Master of Science in Data Science program.
