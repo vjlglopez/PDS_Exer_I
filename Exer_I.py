@@ -27,6 +27,7 @@ def factorial(n):
         x *= i
     return x
 
+
 def cosine(theta):
     n = 0
     value = 1 
