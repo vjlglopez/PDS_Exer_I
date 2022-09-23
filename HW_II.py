@@ -19,28 +19,6 @@ def count_vowels(text):
 
 
 def is_interlock(word_list, word1, word2):
-    '''
-    Check if word1 and word2 interlocks based on word_list
-
-    Two words "interlock" if taking alternating letters from each forms a new 
-    word. For example, "shoe" and "cold" interlock to form "schooled".
-    
-    
-    Parameters
-    ----------
-    word_list : list
-        List of valid words
-    word1 : string
-        First word to check
-    word2 : string
-        Other word to check
-        
-        
-    Returns
-    -------
-    interlockness : bool
-        True if `word1` and `word2` interlock
-    '''
     if len(word1) != len(word2):
         return False
     else:
@@ -130,19 +108,6 @@ def encode(text):
 
 
 def check_brackets(str_with_brackets):
-    """Check whether str_with_bracks is bracketed correctly
-    
-    Parameters
-    ----------
-    str_with_brackets : str
-        String with brackets that are possibly nested
-    
-    Returns
-    -------
-    is_correct : bool
-        `True` if `str_with_brackets` is bracketed correctly, `False` 
-        otherwise
-    """
     brackets = [['(',')'], ['[',']'], ['{','}'], ['<','>']]
     b_open = [b[0] for b in brackets]
     b_close = [b[1] for b in brackets]
@@ -178,7 +143,6 @@ def nested_sum(list_of_lists):
 
 
 def count_people(log):
-    
     #clean the data first and extract list and count
     x_joined = list(log)
     w = ''.join(x_joined)
@@ -215,31 +179,6 @@ def count_people(log):
 
 
 def next_word(text, word=None):
-    """
-    Return the most likely next word in text
-    
-    A word is defined as a sequence of all non-whitespace characters between
-    whitespaces. Words are case-insensitive.
-    
-    Parameters
-    ----------
-    text : string
-        Text to train at.
-    word : string or `None`
-        Find the most likely next word of `word` or likely next word of all
-        words if `None`. 
-        
-    
-    Returns
-    -------
-    next_word : tuple or list of tuple
-        If `word` is a string then return the most likely next word of `word`
-        as a tuple of `(word, most_likely_next_word)`. If `word` is not found
-        in `text`, `most_likely_next_word` is an empty string. If `word` is
-        `None` then return the list of `(word, most_likely_next_word)` for all
-        words in `text`. If there is more than one most likely next word, pick
-        the first word based on alphabetical (lexicographic) order.
-    """ 
     from collections import Counter
     
     text_list = text.split()
